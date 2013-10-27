@@ -6,7 +6,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', 'octo_site.views.home', name='home'),
+    url(r'^$', 'octo_cv.views.home', name='home'),
     # url(r'^octo_site/', include('octo_site.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
