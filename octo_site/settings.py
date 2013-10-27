@@ -123,6 +123,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocsa',
     'octo_site',
+    'octo_cv',
 )
 
 # A sample logging configuration. The only tangible logging
