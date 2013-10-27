@@ -5,7 +5,7 @@ DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+    ('Maria Nita', 'maria.nita.dn@gmail.com'),
 )
 MANAGERS = ADMINS
 
@@ -154,3 +154,7 @@ LOGGING = {
         },
     }
 }
+try:
+    from octo_site.settings_local import *
+except:
+    print("Couldn't import local settings")
