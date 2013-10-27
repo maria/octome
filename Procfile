@@ -1,1 +1,1 @@
-web: gunicorn onboarding.wsgi
+web: gunicorn octome.wsgi
