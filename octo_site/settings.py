@@ -124,6 +124,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocsa',
     'octo_site',
     'octo_cv',
+    'crispy_forms',
 )
 
 # A sample logging configuration. The only tangible logging
