@@ -126,6 +126,7 @@ INSTALLED_APPS = (
     'octo_cv',
     'crispy_forms',
     'bootstrap_toolkit',
+    'south',
 )
 
 # A sample logging configuration. The only tangible logging
