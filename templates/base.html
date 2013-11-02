@@ -11,10 +11,33 @@
 
 <body>
 
-{% block content %}
-{% endblock %}
+<div class="container-fluid">
+
+    <div class="row-fluid navbar">
+        <div class="span9">
+            <div class="navbar-inner">
+                <img src='#' class="brand">
+            </div>
+        </div>
+    </div>
+
+    <div class='row-fluid'>
+        <div class="span3">
+            <ul class="nav">
+                <li> <a href="{% url 'home' %}"> Home </a></li>
+                <li> <a href="{% url 'contact' %}"> Contact </a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row-fluid">
+        <div class="span6">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+
+</div>
 
 </body>
-
-</head>
 </html>
