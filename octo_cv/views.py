@@ -8,3 +8,9 @@ class HomeView(TemplateView):
 
     def get(self, request):
         return render(request, self.template_name)
+
+class ContactView(TemplateView):
+    template_name = 'contact.html'
+
+    def get(self, request):
+        return render(request, self.template_name)
