@@ -1,5 +1,7 @@
 from django.db import models
 
+from octo_site.constants import ContactType
+
 
 class Contact(models.Model):
     """Describe a contact information resource, like a social profile.
@@ -10,12 +12,6 @@ class Contact(models.Model):
             - image - Twitter logo
             - description - account description
     """
-
-    class ContactType:
-        ADDRESS = 'Address'
-        EMAIL = 'Email'
-        PHONE = 'Phone'
-        SOCIAL = 'SocialProfile'
 
     contact_types = (
         ('Address', ContactType.ADDRESS),
