@@ -1,12 +1,34 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-
-    <p>GitHub: <a href="http://github.com/marianitadn" target="_blank">Maria Nita</a></p>
-    <p>Linkedin: <a href="http://ro.linkedin.com/in/marianitadn" target="_blank">Maria Nita</a></p>
-    <p>Twitter: <a href="http://twitter.com/MariaDana13" target="_blank">@MariaDana13</a></p>
-    <p>G+: <a href="http://google.com/+MariaDanaNita" target="_blank">@MariaDana13</a></p>
-    <p>Facebook: <a href="http://facebook.com/marianitadn" target="_blank">Maria Nita</a></p>
-
+<ul class="thumbnails">
+    {% for contact in social_contacts %}
+      <li class="span4">
+        <div class="thumbnail">
+            <img data-src="{{contact.image}}" alt="">
+            <h3>{{contact.name}}</h3>
+            <p>{{contact.description}}</p>
+        </div>
+      </li>
+    {% endfor %}
+</ul>
 {% endblock %}
+
+    <li class="span4">
+        <p>GitHub: <a href="http://github.com/marianitadn" target="_blank">Maria Nita</a></p>
+    </li>
+    <li class="span4">
+        <p>Linkedin: <a href="http://ro.linkedin.com/in/marianitadn" target="_blank">Maria Nita</a></p>
+    </li>
+    <li class="span4">
+        <p>G+: <a href="http://google.com/+MariaDanaNita" target="_blank">+MariaDanaNita</a></p>
+    </li>
+    <li class="span4">
+        <p>Pinterest: <a href="http://www.pinterest.com/marianitadn" target="_blank">Maria Nita</a></p>
+    </li>
+    <li class="span4">
+        <p>Twitter: <a href="http://twitter.com/MariaDana13" target="_blank">@MariaDana13</a></p>
+    </li>
+    <li class="span4">
+        <p>Facebook: <a href="http://facebook.com/marianitadn" target="_blank">Maria Nita</a></p>
+    </li>
