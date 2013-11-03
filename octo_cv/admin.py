@@ -4,7 +4,8 @@ from octo_cv.models.contact import Contact
 
 
 class ContactAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('name', 'type')
+    search_fields = ('name', 'type')
 
 
 admin.site.register(Contact, ContactAdmin)
