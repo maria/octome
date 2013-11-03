@@ -12,6 +12,8 @@ class Contact(models.Model):
             - image - Twitter logo
             - description - account description
     """
+    class Meta:
+        app_label = 'octo_cv'
 
     contact_types = (
         ('Address', ContactType.ADDRESS),
@@ -24,5 +26,5 @@ class Contact(models.Model):
     name = models.CharField(max_length=30)
     description = models.TextField()
     url = models.URLField(null=True)
-    image = models.ImageField(null=True)
+    image = models.ImageField(upload_to='images', null=True)
     email = models.EmailField(null=True)

@@ -14,7 +14,7 @@ class Migration(SchemaMigration):
             ('name', models.CharField(max_length=30)),
             ('description', models.TextField()),
             ('url', models.URLField(null=True)),
-            ('image', models.ImageField(null=True)),
+            ('image', models.ImageField(upload_to='images', null=True)),
             ('email', models.EmailField(null=True)),
         )
         db.create_table('octo_cv_contact', fields)
