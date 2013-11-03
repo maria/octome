@@ -1,6 +1,6 @@
 from django.db import models
 
-from octo_site.constants import ContactType
+from octo_cv.constants import ContactType
 
 
 class Contact(models.Model):
