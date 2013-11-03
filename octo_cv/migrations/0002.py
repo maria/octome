@@ -18,6 +18,7 @@ class Migration(SchemaMigration):
             ('email', models.EmailField(null=True)),
         )
         db.create_table('octo_cv_contact', fields)
+        db.send_create_signal('octo_cv', ['Contact'])
 
     def backwards(self, orm):
         db.delete_table('octo_cv_contact')
