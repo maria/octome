@@ -4,11 +4,11 @@
 <ul class="thumbnails">
     {% for contact in social_contacts %}
       <li class="span4">
-        <div class="thumbnail">
-            <a href={{contact.url}} target="_blank"> <img src={{contact.image}} alt=""> </a>
+        <a href={{contact.url}} target="_blank" class="thumbnail">
             <h3>{{contact.name}}</h3>
+            <img data-src={{contact.image}} alt="">
             <p>{{contact.description}}</p>
-        </div>
+        </a>
       </li>
     {% endfor %}
 </ul>
