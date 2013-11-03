@@ -1,1 +1,1 @@
-web: gunicorn octo_site.wsgi
+web: gunicorn wsgi
