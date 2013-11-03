@@ -122,7 +122,6 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocsa',
-    'octo_site',
     'octo_cv',
     'crispy_forms',
     'bootstrap_toolkit',
@@ -158,6 +157,6 @@ LOGGING = {
     }
 }
 try:
-    from octo_site.settings_local import *
+    from settings_local import *
 except:
     print("Couldn't import local settings")
