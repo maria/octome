@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 
 from octo_cv.models import Contact
-from octo_site.constants import ContactType
+from octo_cv.constants import ContactType
 
 
 class HomeView(TemplateView):
