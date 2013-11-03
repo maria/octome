@@ -16,10 +16,10 @@ class Contact(models.Model):
         app_label = 'octo_cv'
 
     contact_types = (
-        ('Address', ContactType.ADDRESS),
-        ('Email', ContactType.EMAIL),
-        ('Phone', ContactType.PHONE),
-        ('Social', ContactType.SOCIAL),
+        (ContactType.ADDRESS, ContactType.ADDRESS),
+        (ContactType.EMAIL, ContactType.EMAIL),
+        (ContactType.PHONE, ContactType.PHONE),
+        (ContactType.SOCIAL, ContactType.SOCIAL),
     )
 
     type = models.CharField(max_length=20, choices=contact_types)
