@@ -3,6 +3,4 @@
 *.log
 settings_local.py
 *.db
-/media/images/*.png
-/media/images/*.jpg
 
