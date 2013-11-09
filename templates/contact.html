@@ -1,15 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
-<ul class="thumbnails">
+<div class="row">
     {% for contact in social_contacts %}
-      <li class="span4">
-        <a href={{contact.url}} target="_blank" class="thumbnail">
-            <h3>{{contact.name}}</h3>
-            <img data-src={{contact.image}} alt="">
-            <p>{{contact.description}}</p>
+      <div class="span4">
+        <a href={{contact.url}} class="thumbnail", target="_blank">
+        {% if contact.image %}
+          <img src={{MEDIA_URL}}{{contact.image}} alt={{contact.url}}>
+        {% else %}
+          <img data-src='#' alt={{contact.url}}>
+        {% endif %}
         </a>
-      </li>
+      </div>
     {% endfor %}
-</ul>
+</div>
 {% endblock %}
