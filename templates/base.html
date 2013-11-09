@@ -9,6 +9,7 @@
     {% bootstrap_stylesheet_tag %}
     {% bootstrap_stylesheet_tag "responsive" %}
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 </head>
 
 <body>
@@ -23,7 +24,7 @@
             <div class="row">
                 <div class="span4">
                     <a href={% url 'home' %} class="thumbnail">
-                      <img src="">
+                      <i class="fa fa-home fa-5x"></i>
                       <span>Hi!</span>
                     </a>
                 </div>
