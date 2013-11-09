@@ -4,13 +4,17 @@ from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 from settings import MEDIA_URL, MEDIA_ROOT
-from octo_cv.views import HomeView, ContactView
+from octo_cv.views import *
 
 admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', HomeView.as_view(), name='home'),
     url(r'^contact/', ContactView.as_view(), name='contact'),
+    url(r'^education/', ContactView.as_view(), name='education'),
+    url(r'^work/', ContactView.as_view(), name='work'),
+    url(r'^volunteer/', ContactView.as_view(), name='volunteer'),
+    url(r'^about/', ContactView.as_view(), name='about'),
     url(r'^admin/', include(admin.site.urls)),
 )
 
