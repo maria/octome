@@ -1,12 +1,44 @@
 {% extends "base.html" %}
 
 {% block content %}
+    <!-- Home thumbnail -->
+      <div class="span4">
+        <a href="" class="thumbnail">
+          <img src="">
+          <span>Work</span>
+        </a>
+      </div>
+</div>
+
 <div class="row">
       <div class="span4">
-        <div class="thumbnail">
-          <h1> </h1>
-          <span></span>
-        </div>
+        <a href="" class="thumbnail">
+          <img src="">
+          <span>Education</span>
+        </a>
+      </div>
+
+      <div class="span4">
+        <a href="" class="thumbnail">
+          <img src="">
+          <span>Volunteering</span>
+        </a>
+      </div>
+</div>
+
+<div class="row">
+      <div class="span4">
+        <a href={% url 'contact' %} class="thumbnail">
+          <img src="">
+          <span>Contact</span>
+        </a>
+      </div>
+
+      <div class="span4">
+        <a href="" class="thumbnail">
+          <img src="" alt="">
+          <span>About</span>
+        </a>
       </div>
 </div>
 {% endblock %}
