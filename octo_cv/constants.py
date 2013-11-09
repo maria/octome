@@ -3,3 +3,8 @@ class ContactType:
     EMAIL = 'Email'
     PHONE = 'Phone'
     SOCIAL = 'SocialProfile'
+
+class DegreeType:
+    HIGHSCHOOL = 'highschool'
+    BACHELOR = 'bachelor'
+    MASTER = 'master'
