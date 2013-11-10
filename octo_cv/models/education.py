@@ -23,3 +23,8 @@ class Education(models.Model):
     description = models.TextField()
     url = models.URLField(null=True, blank=True)
     image = models.ImageField(upload_to='images', null=True, blank=True)
+
+    @property
+    def location(self):
+        return self.city + ', ' + self.country
+
