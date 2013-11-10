@@ -1,0 +1,14 @@
+{% block content %}
+
+    <div class="span3">
+      <div class="thumbnail">
+          <ul>
+            <address align="left"><i class="fa fa-envelope-o"> <a href="mailto:{{contact.email}}"> {{contact.email.email}} </a></i></address>
+            <address align="left"><i class="fa fa-mobile-phone"> {{contact.phone.description}}</i></address>
+            <address align="left"><i class="fa fa-skype"></i> {{contact.skype.email}} </address>
+            <address align="left"><i class="fa fa-globe"></i> {{contact.location.description}} </address>
+          </ul>
+      </div>
+    </div>
+
+{% endblock %}

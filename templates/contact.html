@@ -3,6 +3,9 @@
 {% block content %}
   {% with social_template='social_contact.html' %}
     <!-- Home thumbnail from base template -->
+    <!-- General Contact info -->
+      {% include 'general_contact.html' with contact=contacts %}
+
       {% with contact=social_contacts.github %}
         {% include social_template with social=contact %}
       {% endwith %}

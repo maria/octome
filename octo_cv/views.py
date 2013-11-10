@@ -16,17 +16,24 @@ class ContactView(TemplateView):
     template_name = 'contact.html'
 
     def get(self, request):
-        """Get all the Contacts of type Social Profile and create a mapping:
+        """Get all the Contacts of type Social Profile or Address,
+        and create a mapping:
             social_contact_name -> social_contact_object,
-        to display them in a given order in the view.
+        in order to display them in a given order in the view.
         """
-        view_social_contacts = dict()
-        social_contacts = Contact.objects.filter(type=ContactType.SOCIAL)
+        view_social_contacts = view_contacts = dict()
+        contacts = Contact.objects.filter(type__in=[ContactType.SOCIAL,
+                                                    ContactType.ADDRESS])
 
-        for social_contact in social_contacts:
-            view_social_contacts[social_contact.name.lower()] = social_contact
-        return render(request, self.template_name,
-                      {'social_contacts': view_social_contacts})
+        for contact in contacts:
+            if contact.type == ContactType.SOCIAL:
+                view_social_contacts[contact.name.lower()] = contact
+            elif contact.type == ContactType.ADDRESS:
+                view_contacts[contact.name.lower()] = contact
+
+        template_data = {'social_contacts': view_social_contacts,
+                         'contacts': view_contacts }
+        return render(request, self.template_name, template_data)
 
 
 class WorkView(TemplateView):
