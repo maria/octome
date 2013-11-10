@@ -1,0 +1,13 @@
+      <div>
+        <p class="text-center lead page-header"><small> {{item.role}} @ {{item.company}}</small></p>
+        <ul>
+        {% if not item.end_date %}
+            <ol><i class="fa fa-calendar"></i> {{item.start_date}} - present </ol>
+        {% else %}
+            <ol><i class="fa fa-calendar"></i> {{item.start_date}} - {{item.end_date}}</ol>
+        {% endif %}
+            <ol><i class="fa fa-gear"></i> {{item.description}}</ol>
+            <ol><i class="fa fa-globe"></i> {{item.location}} </ol>
+            <ol><i class="fa fa-link"></i> <a href={{item.url}} target="_blank"> {{item.url}} </a></ol>
+        </ul>
+      </div>

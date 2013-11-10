@@ -2,14 +2,15 @@
 
 {% block content %}
 
-<div class="row">
-      <div class="span3">
-      </div>
-</div>
+    {% with item_template='volunteer_item.html' %}
+    <div class="span9">
+    {% include item_template with item=works.google_student_ambassador %}
+    </div>
 
-<div class="row">
-      <div class="span9">
-      </div>
+    <div class="span9">
+    {% include item_template with item=works.volunteer %}
+    </div>
 </div>
-
+    {% endwith %}
+</div>
 {% endblock %}
