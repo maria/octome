@@ -3,14 +3,14 @@
 {% block content %}
     <!-- Home thumbnail -->
       <div class="span3">
-        <a href="" class="thumbnail">
+        <a href={% url 'work' %} class="thumbnail">
           <p class="text-center lead page-header"> Work </p>
           <div align="center"><i class="fa fa-laptop fa-5x"></i></div>
         </a>
       </div>
 
       <div class="span3">
-        <a href="" class="thumbnail">
+        <a href={% url 'education' %} class="thumbnail">
           <p class="text-center lead page-header">Education</p>
           <div align="center"><i class="fa fa-pencil fa-5x"></i></div>
         </a>
@@ -19,7 +19,7 @@
 
 <div class="row">
       <div class="span3">
-        <a href="" class="thumbnail">
+        <a href={% url 'volunteer' %} class="thumbnail">
           <p class="text-center lead page-header">Volunteering</p>
           <div align="center"><i class="fa fa-group fa-5x"></i></div>
         </a>
@@ -33,7 +33,7 @@
       </div>
 
       <div class="span3">
-        <a href="" class="thumbnail">
+        <a href={% url 'about' %} class="thumbnail">
           <p class="text-center lead page-header">About</p>
           <div align="center"><i class="fa fa-magic fa-5x"></i></div>
         </a>

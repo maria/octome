@@ -11,10 +11,10 @@ admin.autodiscover()
 urlpatterns = patterns('',
     url(r'^$', HomeView.as_view(), name='home'),
     url(r'^contact/', ContactView.as_view(), name='contact'),
-    url(r'^education/', ContactView.as_view(), name='education'),
-    url(r'^work/', ContactView.as_view(), name='work'),
-    url(r'^volunteer/', ContactView.as_view(), name='volunteer'),
-    url(r'^about/', ContactView.as_view(), name='about'),
+    url(r'^education/', EducationView.as_view(), name='education'),
+    url(r'^work/', WorkView.as_view(), name='work'),
+    url(r'^volunteer/', VolunteerView.as_view(), name='volunteer'),
+    url(r'^about/', AboutView.as_view(), name='about'),
     url(r'^admin/', include(admin.site.urls)),
 )
 
