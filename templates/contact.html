@@ -1,21 +1,37 @@
 {% extends "base.html" %}
 
 {% block content %}
-  </div>
-  </br>
-  <div class="row">
-    {% for contact in social_contacts %}
-      <div class="span3">
-        <a href={{contact.url}} class="thumbnail", target="_blank">
-        {% if contact.image %}
-          <img src={{MEDIA_URL}}{{contact.image}} alt={{contact.url}} class="contact">
-        {% else %}
-          <a href={{contact.url}} target="_blank">
-            <i class="fa fa-camera fa-5x"></i>
-          </a>
-        {% endif %}
-        </a>
-      </div>
-    {% endfor %}
-</div>
+  {% with social_template='social_contact.html' %}
+    <!-- Home thumbnail from base template -->
+      {% with contact=social_contacts.github %}
+        {% include social_template with social=contact %}
+      {% endwith %}
+
+      {% with contact=social_contacts.linkedin %}
+        {% include social_template with social=contact %}
+      {% endwith %}
+    </div>
+    </br>
+
+    <div class="row">
+     {% with contact=social_contacts.facebook %}
+        {% include social_template with social=contact %}
+      {% endwith %}
+
+      {% with contact=social_contacts.google_plus %}
+        {% include social_template with social=contact %}
+      {% endwith %}
+
+      {% with contact=social_contacts.twitter %}
+        {% include social_template with social=contact %}
+      {% endwith %}
+    </div>
+    </br>
+
+    <div class="row">
+     {% with contact=social_contacts.pinterest %}
+        {% include social_template with social=contact %}
+      {% endwith %}
+    </div>
+  {% endwith %}
 {% endblock %}

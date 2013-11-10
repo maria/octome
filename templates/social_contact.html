@@ -1,0 +1,14 @@
+{% block content %}
+
+    <div class="span3">
+      <a href={{social.url}} class="thumbnail", target="_blank">
+      {% if social.image %}
+        <img src={{MEDIA_URL}}{{social.image}} alt={{social.url}} class="contact">
+      {% else %}
+        <p class="text-center lead page-header">{{social.name}}</p>
+        <div align="center"><i class="fa fa-camera fa-5x"></i></div>
+      {% endif %}
+      </a>
+    </div>
+
+{% endblock %}
