@@ -13,7 +13,7 @@ class EducationAdmin(admin.ModelAdmin):
     search_fields = ('school', 'degree', 'field', 'country')
 
 class WorkAdmin(admin.ModelAdmin):
-    list_display = ('type', 'company', 'role')
+    list_display = ('id', 'company', 'role', 'type')
     search_fields = ('type', 'company', 'role', 'city')
 
 
