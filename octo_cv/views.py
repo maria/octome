@@ -2,8 +2,8 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.views.generic import TemplateView
 
-from octo_cv.models import Contact, Education
-from octo_cv.constants import ContactType
+from octo_cv.models import Contact, Education, Work
+from octo_cv.constants import ContactType, WorkType
 
 
 class HomeView(TemplateView):
@@ -40,7 +40,14 @@ class WorkView(TemplateView):
     template_name = 'work.html'
 
     def get(self, request):
-        return render(request, self.template_name)
+        view_works = dict()
+        works = Work.objects.filter(type=WorkType.NON_VOLUNTEER)
+
+        for work in works:
+            view_works[work.role.lower()] = work
+
+        template_data = {'works': view_works}
+        return render(request, self.template_name, template_data)
 
 
 class EducationView(TemplateView):
