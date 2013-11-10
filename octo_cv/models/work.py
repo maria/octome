@@ -14,8 +14,8 @@ class Work(models.Model):
     )
 
     type = models.CharField(max_length=30, choices=work_types)
-    company = models.CharField(max_length=60)
-    role = models.CharField(max_length=60)
+    company = models.CharField(max_length=80)
+    role = models.CharField(max_length=80)
     city = models.CharField(max_length=60)
     country = models.CharField(max_length=60)
     description = models.TextField()

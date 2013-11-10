@@ -13,7 +13,7 @@ class Education(models.Model):
         ('Bachelor', DegreeType.BACHELOR),
         ('Master', DegreeType.MASTER))
 
-    school = models.CharField(max_length=60)
+    school = models.CharField(max_length=80)
     degree = models.CharField(max_length=60, choices=degree_type)
     field = models.CharField(max_length=60)
     city = models.CharField(max_length=60)
