@@ -2,14 +2,25 @@
 
 {% block content %}
 
-<div class="row">
-      <div class="span3">
-      </div>
+    {% with item_template='work_item.html' %}
+    <div class="span9">
+    {% include item_template with item=works.developer %}
+    </div>
+
+    <div class="span9">
+    {% include item_template with item=works.teacher %}
+    </div>
 </div>
+</br>
 
 <div class="row">
-      <div class="span9">
-      </div>
-</div>
+    <div class="span6">
+    {% include item_template with item=works.sysadmin %}
+    </div>
 
+    <div class="span6">
+    {% include item_template with item=works.intern %}
+    </div>
+    {% endwith %}
+</div>
 {% endblock %}
