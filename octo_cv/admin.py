@@ -1,7 +1,6 @@
 from django.contrib import admin
 
-from octo_cv.models.contact import Contact
-from octo_cv.models.education import Education
+from octo_cv.models import Contact, Education, Work
 
 
 class ContactAdmin(admin.ModelAdmin):
@@ -13,6 +12,11 @@ class EducationAdmin(admin.ModelAdmin):
     list_display = ('school', 'degree', 'field')
     search_fields = ('school', 'degree', 'field', 'country')
 
+class WorkAdmin(admin.ModelAdmin):
+    list_display = ('type', 'company', 'role')
+    search_fields = ('type', 'company', 'role', 'city')
+
 
 admin.site.register(Contact, ContactAdmin)
 admin.site.register(Education, EducationAdmin)
+admin.site.register(Work, WorkAdmin)

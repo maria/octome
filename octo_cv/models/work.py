@@ -8,7 +8,12 @@ class Work(models.Model):
     class Meta:
         app_label = 'octo_cv'
 
-    type = models.CharField(max_length=30, choices=WorkType)
+    work_types = (
+        (WorkType.VOLUNTEER, WorkType.VOLUNTEER),
+        (WorkType.NON_VOLUNTEER, WorkType.NON_VOLUNTEER)
+    )
+
+    type = models.CharField(max_length=30, choices=work_types)
     company = models.CharField(max_length=60)
     role = models.CharField(max_length=60)
     city = models.CharField(max_length=60)
