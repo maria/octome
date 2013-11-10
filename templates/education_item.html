@@ -1,0 +1,12 @@
+{% block content %}
+      <div>
+        <p class="text-center lead page-header">{{item.degree}}</p>
+        <ul>
+            <ol><i class="fa fa-calendar"></i> {{item.start_date}} - {{item.end_date}}</ol>
+            <ol><i class="fa fa-terminal"></i> {{item.field}}</ol>
+            <ol><i class="fa fa-hdd-o"></i> {{item.school}}</ol>
+            <ol><i class="fa fa-globe"></i> {{item.location}} </ol>
+            <ol><i class="fa fa-link"></i> <a href={{item.url}} target="_blank"> {{item.url}} </a></ol>
+        </ul>
+      </div>
+{% endblock %}

@@ -1,15 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
+    {% with item_template='education_item.html' %}
+    <div class="span9">
+    {% include item_template with item=educations.master %}
+    </div>
+</div>
+</br>
 
 <div class="row">
-      <div class="span3">
-      </div>
-</div>
+    <div class="span6">
+    {% include item_template with item=educations.bachelor %}
+    </div>
 
-<div class="row">
-      <div class="span9">
-      </div>
+    <div class="span6">
+    {% include item_template with item=educations.highschool %}
+    </div>
 </div>
-
+    {% endwith %}
 {% endblock %}

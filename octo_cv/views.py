@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.views.generic import TemplateView
 
-from octo_cv.models import Contact
+from octo_cv.models import Contact, Education
 from octo_cv.constants import ContactType
 
 
@@ -47,7 +47,14 @@ class EducationView(TemplateView):
     template_name = 'education.html'
 
     def get(self, request):
-        return render(request, self.template_name)
+        view_educations = dict()
+
+        educations = Education.objects.all()
+        for education in educations:
+            view_educations[education.degree.lower()] = education
+
+        template_data = {'educations': view_educations}
+        return render(request, self.template_name, template_data)
 
 
 class VolunteerView(TemplateView):
