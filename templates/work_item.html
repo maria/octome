@@ -1,6 +1,6 @@
 {% block content %}
       <div>
-        <p class="text-center lead page-header">{{item.role}} <small> @ </small> {{item.company}}</p>
+        <p class="text-center lead page-header"><small> {{item.role}} @ {{item.company}}</small></p>
         <ul>
         {% if not item.end_date %}
             <ol><i class="fa fa-calendar"></i> {{item.start_date}} - present </ol>
