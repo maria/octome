@@ -10,6 +10,7 @@ class Migration(SchemaMigration):
     def forwards(self, orm):
         fields = (
             ('id', models.AutoField(primary_key=True)),
+            ('type', models.CharField(max_length=30)),
             ('company', models.CharField(max_length=60)),
             ('role', models.CharField(max_length=60)),
             ('city', models.CharField(max_length=60)),

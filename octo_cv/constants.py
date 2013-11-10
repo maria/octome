@@ -8,3 +8,7 @@ class DegreeType:
     HIGHSCHOOL = 'highschool'
     BACHELOR = 'bachelor'
     MASTER = 'master'
+
+class WorkType:
+    VOLUNTEER = 'volunteer'
+    NON_VOLUNTEER = "professional"
