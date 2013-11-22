@@ -1,6 +1,8 @@
 /* custom css */
 
 div #notepad {
-    background-image: url('http://marianitadn.herokuapp.com/media/images/background.jpg');
-    opacity: 0.4;
+    background-image: {
+        url('http://marianitadn.herokuapp.com/media/images/background.jpg');
+        opacity: 0.4;
+    }
 }
