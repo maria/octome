@@ -1,5 +1,5 @@
 /* custom css */
 
 body {
-    background-image: url('media/images/background.jpg');
+    background-image: url('{{MEDIA_ROOT}}/images/background.jpg');
 }
