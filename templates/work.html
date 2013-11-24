@@ -1,26 +1,12 @@
-{% extends "base.html" %}
+{% extends "base_section.html" %}
 
 {% block content %}
 
     {% with item_template='work_item.html' %}
-    <div class="span9">
     {% include item_template with item=works.developer %}
-    </div>
-
-    <div class="span9">
     {% include item_template with item=works.teacher %}
-    </div>
-</div>
-</br>
 
-<div class="row">
-    <div class="span6">
     {% include item_template with item=works.sysadmin %}
-    </div>
-
-    <div class="span6">
     {% include item_template with item=works.intern %}
-    </div>
     {% endwith %}
-</div>
 {% endblock %}
