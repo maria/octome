@@ -14,27 +14,13 @@
 
 <body>
 
-<div class="container-fluid">
-    <div class="page-header">
-        <blockquote>
-            <h3> Move fast and break things! </h3>
-        </blockquote>
-    </div>
-    <div class="row-fluid" id="notepad">
-        <div class="span1"></div>
-        <div class="span9">
-            <div class="row">
-                <div class="span3">
-                    <a href={% url 'home' %} class="thumbnail">
-                      <p class="text-center lead page-header"> Home </p>
-                      <div align="center"><i class="fa fa-home fa-5x"></i></div>
-                    </a>
-                </div>
-            {% block content %}
-            {% endblock %}
-        </div>
-    </div>
-</div>
+<section class="container-fluid">
+    <header class="page-header">
+        <h3> Move fast and break things! </h3>
+    </header>
+        {% block content %}
+        {% endblock %}
+</section>
 
 </body>
 </html>
