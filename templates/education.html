@@ -1,6 +1,7 @@
 {% extends "base_section.html" %}
 
 {% block content %}
+<div class="row">
     {% with item_template='education_item.html' %}
     <div class="span9">
     {% include item_template with item=educations.master %}
