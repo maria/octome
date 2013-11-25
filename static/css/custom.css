@@ -14,5 +14,21 @@ body {
 }
 
 a:link, a:visited, a:hover {
-    color: #006666;
+    color: #007361;
+    text-shadow: none;
+}
+
+.navbar .nav > li > a {
+    color: #007361;
+    text-shadow: none;
+}
+
+.thumbnail {
+    border: 1 none;
+    border-color: #007361;
+    box-shadow: none;
+}
+
+.page-header {
+    border-color: #007361;
 }
