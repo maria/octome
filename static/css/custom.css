@@ -8,9 +8,8 @@ body {
     position: fixed;
 }
 
-#central {
-    margin-left: 200px;
-    position: center;
+.page-header {
+    border-color: #007361;
 }
 
 a:link, a:visited, a:hover {
@@ -29,6 +28,12 @@ a:link, a:visited, a:hover {
     box-shadow: none;
 }
 
-.page-header {
-    border-color: #007361;
+.thumbnail.social {
+    border: 0 none;
+    box-shadow: none;
+}
+
+#central {
+    margin-left: 200px;
+    position: center;
 }
