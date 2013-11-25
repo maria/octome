@@ -10,6 +10,7 @@ body {
 
 #central {
     margin-left: 200px;
+    position: center;
 }
 
 a:link, a:visited, a:hover {
