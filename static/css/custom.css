@@ -1,8 +1,9 @@
 /* custom css */
 
 body {
-    background-image: url({{MEDIA_URL}}"images/background.png");
+    background-image: url("http://marianitadn.herokuapp.com/media/images/background.png");
 }
+
 #central {
     margin-left: 200px;
 }
