@@ -1,5 +1,8 @@
 /* custom css */
 
+body {
+    background-image: url({{MEDIA_URL}}"images/background.png");
+}
 #central {
     margin-left: 200px;
 }
