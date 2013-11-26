@@ -33,7 +33,7 @@ class Contact(models.Model):
     url = models.URLField(null=True, blank=True)
     image = models.ImageField(upload_to='images', null=True, blank=True)
     email = models.EmailField(null=True, blank=True)
-    network = models.CharField(max_length=30, choices=network_types,
+    network = models.CharField(max_length=30, choices=network_types, null=True,
                               help_text="Return the type of network for the "
                               "social profile, in order to display the Linkedin,"
                               " GH accounts before Pinterest or Twitter  accounts.")

@@ -8,7 +8,7 @@ from django.db import models
 class Migration(SchemaMigration):
 
     def forwards(self, orm):
-        db.add_column('octo_cv_contact', 'network', models.CharField(max_length=30))
+        db.add_column('octo_cv_contact', 'network', models.CharField(max_length=30, null=True))
 
     def backwards(self, orm):
         db.delete_column('octo_cv_contact', 'network')
