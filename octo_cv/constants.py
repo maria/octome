@@ -12,3 +12,8 @@ class DegreeType:
 class WorkType:
     VOLUNTEER = 'volunteer'
     NON_VOLUNTEER = "professional"
+
+class NetworkType:
+    GENERAL = 'General'
+    SOCIAL = 'Social'
+    PROFESSIONAL = 'Professional'
