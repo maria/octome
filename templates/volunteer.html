@@ -3,14 +3,9 @@
 {% block content %}
 
     {% with item_template='volunteer_item.html' %}
-    <div class="span9">
-    {% include item_template with item=volunteers.google_student_ambassador %}
-    </div>
-
-    <div class="span9">
-    {% include item_template with item=volunteers.volunteer %}
-    </div>
-</div>
+    {% for volunteer in volunteers %}
+        {% include item_template with item=volunteer %}
+    {% endfor %}
     {% endwith %}
-</div>
+
 {% endblock %}

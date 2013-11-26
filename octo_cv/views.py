@@ -57,14 +57,8 @@ class VolunteerView(TemplateView):
     template_name = 'volunteer.html'
 
     def get(self, request):
-        view_volunteers = dict()
-        volunteers = Work.objects.filter(type=WorkType.VOLUNTEER)
-
-        for volunteer in volunteers:
-            view_volunteers[volunteer.role.lower()] = volunteer
-
-        template_data = {'volunteers': view_volunteers}
-        return render(request, self.template_name, template_data)
+        volunteers = Work.objects.filter(type=WorkType.VOLUNTEER).order_by('-end_date')
+        return render(request, self.template_name, {'volunteers': volunteers})
 
 
 class AboutView(TemplateView):
