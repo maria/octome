@@ -54,14 +54,9 @@ class EducationView(TemplateView):
     template_name = 'education.html'
 
     def get(self, request):
-        view_educations = dict()
-
-        educations = Education.objects.all()
-        for education in educations:
-            view_educations[education.degree.lower()] = education
-
-        template_data = {'educations': view_educations}
-        return render(request, self.template_name, template_data)
+        educations = Education.objects.all().order_by('-end_date')
+        return render(request, self.template_name,
+                      {'educations': educations})
 
 
 class VolunteerView(TemplateView):
