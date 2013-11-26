@@ -16,23 +16,20 @@ class ContactView(TemplateView):
     template_name = 'contact.html'
 
     def get(self, request):
-        """Get all the Contacts of type Social Profile or Address,
-        and create a mapping:
-            social_contact_name -> social_contact_object,
-        in order to display them in a given order in the view.
+        """Get all the Contacts ordered by type and name, and then we separate
+        them based on their network type, in order to display them in a given
+        order in the view.
+        Hence the GitHub & Linkedin aka Professional networks are displayed
+        between the General information profile and social profiles.
         """
-        view_social_contacts = view_contacts = dict()
         contacts = Contact.objects.filter(type__in=[ContactType.SOCIAL,
-                                                    ContactType.ADDRESS])
+            ContactType.ADDRESS]).order_by('type').order_by('name')
 
-        for contact in contacts:
-            if contact.type == ContactType.SOCIAL:
-                view_social_contacts[contact.name.lower()] = contact
-            elif contact.type == ContactType.ADDRESS:
-                view_contacts[contact.name.lower()] = contact
+        template_data = {
+            'professional_networks': contacts.filter(network='Professional'),
+            'social_networks': contacts.filter(network='Social'),
+            'general_networks': contacts.filter(network='General')}
 
-        template_data = {'social_contacts': view_social_contacts,
-                         'contacts': view_contacts }
         return render(request, self.template_name, template_data)
 
 

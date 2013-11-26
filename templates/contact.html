@@ -1,37 +1,26 @@
 {% extends "base_section.html" %}
 
 {% block content %}
-   <div class="row">
-  {% with social_template='social_contact.html' %}
-    <!-- General Contact info -->
-      {% include 'general_contact.html' with contact=contacts %}
 
-      {% with contact=social_contacts.github %}
+<div class="row">
+    {% with general_template='general_contact.html' %}
+        {% for contact in general_networks %}
+            {% include 'general_contact.html' with contact=contact %}
+        {% endfor %}
+    {% endwith %}
+</div>
+</br>
+{% with social_template='social_contact.html' %}
+<div class="row">
+    {% for contact in professional_networks %}
         {% include social_template with social=contact %}
-      {% endwith %}
-
-      {% with contact=social_contacts.linkedin %}
+    {% endfor %}
+</div>
+</br>
+<div class="row">
+    {% for contact in social_networks %}
         {% include social_template with social=contact %}
-      {% endwith %}
-    </div>
-    </br>
-
-    <div class="row">
-     {% with contact=social_contacts.facebook %}
-        {% include social_template with social=contact %}
-      {% endwith %}
-
-      {% with contact=social_contacts.google_plus %}
-        {% include social_template with social=contact %}
-      {% endwith %}
-
-      {% with contact=social_contacts.twitter %}
-        {% include social_template with social=contact %}
-      {% endwith %}
-
-     {% with contact=social_contacts.pinterest %}
-        {% include social_template with social=contact %}
-      {% endwith %}
-    </div>
-  {% endwith %}
+    {% endfor %}
+</div>
+{% endwith %}
 {% endblock %}
