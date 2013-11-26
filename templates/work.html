@@ -3,10 +3,9 @@
 {% block content %}
 
     {% with item_template='work_item.html' %}
-    {% include item_template with item=works.developer %}
-    {% include item_template with item=works.teacher %}
-
-    {% include item_template with item=works.sysadmin %}
-    {% include item_template with item=works.intern %}
+    {% for work in works %}
+        {% include item_template with item=work %}
+    {% endfor %}
     {% endwith %}
+
 {% endblock %}

@@ -40,14 +40,8 @@ class WorkView(TemplateView):
     template_name = 'work.html'
 
     def get(self, request):
-        view_works = dict()
-        works = Work.objects.filter(type=WorkType.NON_VOLUNTEER)
-
-        for work in works:
-            view_works[work.role.lower()] = work
-
-        template_data = {'works': view_works}
-        return render(request, self.template_name, template_data)
+        works = Work.objects.filter(type=WorkType.NON_VOLUNTEER).order_by('-end_date')
+        return render(request, self.template_name, {'works': works})
 
 
 class EducationView(TemplateView):
