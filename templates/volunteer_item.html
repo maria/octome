@@ -1,15 +1,13 @@
-<div class="span9">
-    <div>
-        <p class="text-center lead page-header"><small> {{item.role}} @ {{item.company}}</small></p>
-        <ul>
-        {% if not item.end_date %}
-            <ol><i class="fa fa-calendar"></i> {{item.start_date}} - present </ol>
-        {% else %}
-            <ol><i class="fa fa-calendar"></i> {{item.start_date}} - {{item.end_date}}</ol>
-        {% endif %}
-            <ol><i class="fa fa-group"></i> {{item.description}}</ol>
-            <ol><i class="fa fa-thumb-tack"></i> {{item.location}} </ol>
-            <ol><i class="fa fa-link"></i> <a href={{item.url}} target="_blank"> {{item.url}} </a></ol>
-        </ul>
-    </div>
+<div class="row">
+    <p class="text-center lead page-header"><small> {{item.role}} @ {{item.company}}</small></p>
+    <ul>
+    {% if not item.end_date %}
+        <ol><i class="fa fa-calendar"></i> {{item.start_date}} - present </ol>
+    {% else %}
+        <ol><i class="fa fa-calendar"></i> {{item.start_date}} - {{item.end_date}}</ol>
+    {% endif %}
+        <ol><i class="fa fa-group"></i> {{item.description}}</ol>
+        <ol><i class="fa fa-thumb-tack"></i> {{item.location}} </ol>
+        <ol><i class="fa fa-link"></i> <a href={{item.url}} target="_blank"> {{item.url}} </a></ol>
+    </ul>
 </div>
