@@ -4,9 +4,7 @@
 
 <div class="row">
     {% with general_template='general_contact.html' %}
-        {% for contact in general_networks %}
-            {% include 'general_contact.html' with contact=contact %}
-        {% endfor %}
+        {% include 'general_contact.html' with contact=general_contact %}
     {% endwith %}
 </div>
 </br>

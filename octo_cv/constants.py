@@ -3,6 +3,7 @@ class ContactType:
     EMAIL = 'Email'
     PHONE = 'Phone'
     SOCIAL = 'SocialProfile'
+    SKYPE = 'Skype'
 
 class DegreeType:
     HIGHSCHOOL = 'highschool'

@@ -21,14 +21,22 @@ class ContactView(TemplateView):
         order in the view.
         Hence the GitHub & Linkedin aka Professional networks are displayed
         between the General information profile and social profiles.
+        Construct a general contact object to display contact information like
+        email.
         """
         contacts = Contact.objects.filter(type__in=[ContactType.SOCIAL,
             ContactType.ADDRESS]).order_by('type').order_by('name')
 
+        general_contacts = Contact.objects.filter(network='General')
+
+        general_contact = Contact()
+        for contact in general_contacts:
+            setattr(general_contact, contact.type.lower(), contact.description)
+
         template_data = {
             'professional_networks': contacts.filter(network='Professional'),
             'social_networks': contacts.filter(network='Social'),
-            'general_networks': contacts.filter(network='General')}
+            'general_contact': general_contact}
 
         return render(request, self.template_name, template_data)
 

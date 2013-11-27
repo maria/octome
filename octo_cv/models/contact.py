@@ -19,6 +19,7 @@ class Contact(models.Model):
         (ContactType.EMAIL, ContactType.EMAIL),
         (ContactType.PHONE, ContactType.PHONE),
         (ContactType.SOCIAL, ContactType.SOCIAL),
+        (ContactType.SKYPE, ContactType.SKYPE)
     )
 
     network_types = (
