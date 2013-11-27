@@ -42,3 +42,7 @@ a:link, a:visited, a:hover {
     margin-left: 200px;
     position: center;
 }
+
+.table td {
+    border-color: #007361;
+}
