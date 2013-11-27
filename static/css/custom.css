@@ -38,7 +38,7 @@ a:link, a:visited, a:hover {
     height: 161px;
 }
 
-#central {
+.central {
     margin-left: 200px;
     position: center;
 }

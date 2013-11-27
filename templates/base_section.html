@@ -1,7 +1,7 @@
 {% include "base.html" %}
 
 <section class="row-fluid">
-    <nav class="navbar navbar-default" role="navigation" id="central">
+    <nav class="navbar navbar-default central" role="navigation">
         <ul class="unstyled nav inline">
             <li> <a href={% url 'home' %}><i class="fa fa-home fa-2x"> </i>Home </a> </li>
             <li> <a href={% url 'work' %}><i class="fa fa-laptop fa-2x"> </i> Work</a> </li>
@@ -14,7 +14,7 @@
     </nav>
     </br>
     </br>
-    <div class="row-fluid"  id="central">
+    <div class="row-fluid central">
         <div class="span9">
             {% block content %}
             {% endblock %}
