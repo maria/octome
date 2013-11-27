@@ -5,6 +5,7 @@ body {
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
+    max-width: 1024px;
 }
 
 .page-header {
@@ -30,6 +31,12 @@ a:link, a:visited, a:hover {
 .thumbnail.social {
     border: 0 none;
     box-shadow: none;
+    display: none;
+}
+
+.img-social {
+    width: 161px;
+    height: 161px;
 }
 
 #central {
