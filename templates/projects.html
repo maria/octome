@@ -1,0 +1,11 @@
+{% extends "base_section.html" %}
+
+{% block content %}
+
+    {% with item_template='project_item.html' %}
+    {% for project in projects %}
+        {% include item_template with item=project %}
+    {% endfor %}
+    {% endwith %}
+
+{% endblock %}
