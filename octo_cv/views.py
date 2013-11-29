@@ -22,7 +22,7 @@ class ContactView(TemplateView):
         Hence the GitHub & Linkedin aka Professional networks are displayed
         between the General information profile and social profiles.
         Construct a general contact object to display contact information like
-        email.
+        emailself.
         """
         contacts = Contact.objects.filter(type__in=[ContactType.SOCIAL,
             ContactType.ADDRESS]).order_by('type').order_by('name')
@@ -68,6 +68,13 @@ class VolunteerView(TemplateView):
 
 class AboutView(TemplateView):
     template_name = 'about.html'
+
+    def get(self, request):
+        return render(request, self.template_name)
+
+
+class ProjectsView(TemplateView):
+    template_name = 'projects.html'
 
     def get(self, request):
         return render(request, self.template_name)

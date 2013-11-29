@@ -15,6 +15,7 @@ urlpatterns = patterns('',
     url(r'^work/', WorkView.as_view(), name='work'),
     url(r'^volunteer/', VolunteerView.as_view(), name='volunteer'),
     url(r'^about/', AboutView.as_view(), name='about'),
+    url(r'^projects/', ProjectsView.as_view(), name='projects'),
     url(r'^admin/', include(admin.site.urls)),
 )
 
