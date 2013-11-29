@@ -39,8 +39,16 @@ a:link, a:visited, a:hover {
 }
 
 .central {
-    margin-left: 200px;
-    position: center;
+    margin-left: 25%;
+}
+
+#main-menu {
+    margin-left: 25%;
+    margin-top: 10%;
+}
+
+#logo-header {
+    margin-left: 18%;
 }
 
 .table td {
