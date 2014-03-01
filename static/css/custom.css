@@ -10,6 +10,8 @@ body {
 
 .page-header {
     border-color: #007361;
+    border-top: 1px solid;
+    padding-top: 9px;
 }
 
 a:link, a:visited, a:hover {
@@ -44,11 +46,15 @@ a:link, a:visited, a:hover {
 
 #main-menu {
     margin-left: 35%;
-    margin-top: 10%;
 }
 
 #logo-header {
     margin-left: 20%;
+    margin-top: 0.5%;
+}
+
+#logo-header img {
+    margin-left: 12%;
 }
 
 .table td {
