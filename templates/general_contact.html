@@ -1,20 +1,18 @@
 {% block content %}
 
-<div class="span9">
-      <table class="table table-condensed">
-      <caption> <h4> General info </h4> </caption>
-        <tr>
-            <td><address align="left"><i class="fa fa-envelope-o"> <a href="mailto:{{contact.email}}"> {{contact.email}} </a></i></address></td>
-            </br>
-            <td><address align="right"><i class="fa fa-mobile-phone"> {{contact.phone}} </i></address></td>
-        </tr>
-        <tr>
-            <td><address align="left"><i class="fa fa-skype"></i> {{contact.skype}} </address></td>
-            </br>
-            <td><address align="right"><i class="fa fa-globe"></i> {{contact.address}} </address></td>
-        </tr>
-        <tr><td></td><td></td></tr>
-    </table>
-</div>
+<table class="table table-condensed">
+<caption> <h4> General info </h4> </caption>
+<tr>
+    <td><address align="left"><i class="fa fa-envelope-o"> <a href="mailto:{{contact.email}}"> {{contact.email}} </a></i></address></td>
+    </br>
+    <td><address align="right"><i class="fa fa-mobile-phone"> {{contact.phone}} </i></address></td>
+</tr>
+<tr>
+    <td><address align="left"><i class="fa fa-skype"></i> {{contact.skype}} </address></td>
+    </br>
+    <td><address align="right"><i class="fa fa-globe"></i> {{contact.address}} </address></td>
+</tr>
+<tr><td></td><td></td></tr>
+</table>
 
 {% endblock %}
