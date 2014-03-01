@@ -10,8 +10,6 @@ body {
 
 .page-header {
     border-color: #007361;
-    border-top: 1px solid;
-    padding-top: 9px;
 }
 
 a:link, a:visited, a:hover {
@@ -51,6 +49,9 @@ a:link, a:visited, a:hover {
 #logo-header {
     margin-left: 20%;
     margin-top: 0.5%;
+    border-top: 1px solid;
+    border-top-color: #007361;
+    padding-top: 9px;
 }
 
 #logo-header img {
