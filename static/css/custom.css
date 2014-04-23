@@ -1,11 +1,8 @@
 /* custom css */
 
 body {
-    background-image: url("http://marianitadn.herokuapp.com/media/images/blue.jpg");
-    background-repeat: no-repeat;
-    height: 100%;
-    width: 100%;
-    max-width: 1240px;
+    background-image: url("http://marianitadn.herokuapp.com/media/images/skulls.png");
+    background-repeat: repeat;
 }
 
 .page-header {
