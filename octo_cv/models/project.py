@@ -9,4 +9,4 @@ class Project(models.Model):
     name = models.CharField(max_length=30)
     description = models.TextField()
     url = models.URLField(null=True, blank=True)
-    type = models.CharField(max_length=30, require=False)
+    type = models.CharField(max_length=30)
