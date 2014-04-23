@@ -3,6 +3,7 @@
 body {
     background-image: url("http://marianitadn.herokuapp.com/media/images/skulls.png");
     background-repeat: repeat;
+    max-width: 1240px;
 }
 
 .page-header {
