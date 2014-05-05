@@ -19,7 +19,7 @@ class WorkAdmin(admin.ModelAdmin):
 
 
 class ProjectAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'description', 'url', 'type')
+    list_display = ('id', 'name', 'description', 'url')
 
 
 admin.site.register(Contact, ContactAdmin)
