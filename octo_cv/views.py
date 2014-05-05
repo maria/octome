@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.views.generic import TemplateView
 
-from octo_cv.models import Contact, Education, Work, Projects
+from octo_cv.models import Contact, Education, Work, Project
 from octo_cv.constants import ContactType, WorkType
 
 
@@ -77,5 +77,5 @@ class ProjectsView(TemplateView):
     template_name = 'projects.html'
 
     def get(self, request):
-        projects = Projects.objects.all()
+        projects = Project.objects.all()
         return render(request, self.template_name, {'projects': projects})
