@@ -1,8 +1,7 @@
 /* custom css */
 
 body {
-    background-image: url("http://marianitadn.herokuapp.com/media/images/background.jpg");
-    background-repeat: no-repeat;
+    background-color: beige
     max-width: 1240px;
 }
 
